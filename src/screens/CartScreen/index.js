@@ -1,26 +1,31 @@
 import { useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 
 import restaurants from '../../../assets/data/restaurants.json';
-const restaurant = restaurants[0];
+const restaurant = restaurants[1];
 
 const CartScreen = () => {
 
-    const [quantity, setQuantity] = useState(0);
-    
+    const CartDishItems = ({ cartDish }) => {
+        return(
+            <View style={styles.row}>
+            <View style={styles.quantityContainer}>
+                <Text>1</Text>
+            </View>
+            <Text style={{fontWeight: '600'}}>{cartDish.name}</Text>
+            <Text style={{ marginLeft: 'auto'}}>{cartDish.price}</Text>
+        </View>
+        );
+    };
 
     return (
         <View style={styles.page}>
             <Text style={styles.name}>{restaurant.name}</Text>
-            <Text>Your items</Text>
-            <View style={styles.row}>
-                <View style={styles.quantityContainer}>
-                    <Text>1</Text>
-                </View>
-                <Text style={{fontWeight: '600'}}>Name</Text>
-                <Text style={{ marginLeft: 'auto'}}>UGX 12</Text>
-            </View>
+            <Text style={styles.subtitle}>Your Items</Text>
+            <FlatList data={restaurant.dishes} 
+            renderItem={({ item }) => <CartDishItems cartDish={ item } />}
+            />            
             <View style={styles.separator} />
             <View style={styles.button}>
                 <Text style={styles.buttonText}>Make Order</Text>
@@ -33,13 +38,19 @@ const styles = StyleSheet.create({
     page: {
         flex: 1,
         with: '100%',
-        paddingVertical: 30,
+        paddingVertical: 40,
         padding: 10,
     },
     name: {
         fontSize: 24,
         fontWeight: '700',
         marginVertical: 10,
+    },
+    subtitle: {
+        fontWeight: 'bold',
+        textAlign: 'center', 
+        fontSize: 19, 
+        marginTop: 20
     },
     description: {
         color: 'grey',
@@ -52,7 +63,8 @@ const styles = StyleSheet.create({
     row: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginTop: 50,
+        marginVertical: 15,
+        paddingHorizontal: 10,
     },
     quantity: {
         fontSize: 25,
