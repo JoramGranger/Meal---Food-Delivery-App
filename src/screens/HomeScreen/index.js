@@ -1,4 +1,4 @@
-import {FlatList, StyleSheet } from 'react-native';
+import {FlatList, StyleSheet, View } from 'react-native';
 
 import restaurants from '../../../assets/data/restaurants.json';
 
