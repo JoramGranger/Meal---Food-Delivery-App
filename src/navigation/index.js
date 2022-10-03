@@ -9,23 +9,22 @@ import HomeScreen from '../screens/HomeScreen';
 import OrderDetails from '../screens/OrderDetails';
 import OrdersScreen from '../screens/OrdersScreen';
 import RestaurantDetailsScreen from '../screens/RestaurantDetailsScreen';
+import ProfileScreen from "../screens/Profile";
 
 const Stack = createNativeStackNavigator();
 
 const RootNavigator = () => {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{headerShown: false}}>
             <Stack.Screen 
             name="HomeTabs" 
             component={HomeTabs}
-            options={{headerShown: false}}
             />
 
-            <Stack.Screen 
+            {/* <Stack.Screen 
             name="Restaurant" 
             component={RestaurantDetailsScreen} 
-            /* options={{ headerShown: false}} */
-            />
+            /> */}
 
         </Stack.Navigator>
     );
@@ -43,14 +42,14 @@ const HomeTabs = () => {
             ),
          }}
         />
-        <Tab.Screen name="Orders" component={OrdersScreen}
+        <Tab.Screen name="Orders" component={OrdersStackNavigator}
         options={{
             tabBarIcon: ({ color }) => (
                 <MaterialIcons name="list-alt" size={24} color={color} />
             )
         }}
         />
-        <Tab.Screen name="Profile" component={HomeScreen}
+        <Tab.Screen name="Profile" component={ProfileScreen}
         options={{
             tabBarIcon: ({ color }) => (
                 <FontAwesome5 name="user-alt" size={24} color={color} />
@@ -68,7 +67,20 @@ const HomeStackNavigator = () => {
         <HomeStack.Navigator>
         <HomeStack.Screen name="Restaurants" component={HomeScreen}/>
         <HomeStack.Screen name="Restaurant" component={RestaurantDetailsScreen}/>
+        <HomeStack.Screen name="Dish" component={DishDetailsScreen}/>
+        <HomeStack.Screen name="Cart" component={CartScreen}/>
         </HomeStack.Navigator>
+    );
+};
+
+const OrdersStack = createNativeStackNavigator();
+
+const OrdersStackNavigator = () => {
+    return (
+        <OrdersStack.Navigator>
+        <OrdersStack.Screen name="Orders" component={OrdersScreen}/>
+        <OrdersStack.Screen name="Order" component={OrderDetails}/>
+        </OrdersStack.Navigator>
     );
 };
 

@@ -14,7 +14,7 @@
       "minDeliveryTime": 10,
       "maxDeliveryTime": 44,
       "rating": 1.5095123177204128,
-      "address": "983 Lewis Rapids",
+      "address": "Parliamentary avenue",
       "lat": 46.87190499528364,
       "lng": 28.54937769418778,
       "createdAt": "2022-04-16T12:03:33.225Z",
@@ -22,8 +22,8 @@
     },
     "User": {
       "id": "1",
-      "name": "Vadim",
-      "address": "Abc 1",
+      "name": "Larry",
+      "address": "Kampala Road",
       "lat": 46.86190499528364,
       "lng": 28.54437769418778
     }
@@ -37,13 +37,13 @@
     "orderRestaurantId": "7d7965f7-1b33-4b8c-9bac-0c22bc905030",
     "Restaurant": {
       "id": "7d7965f7-1b33-4b8c-9bac-0c22bc905030",
-      "name": "Jacobs - DuBuque",
+      "name": "Jacobs - Duke",
       "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant1.jpeg",
       "deliveryFee": 0.039448871531492236,
       "minDeliveryTime": 10,
       "maxDeliveryTime": 44,
       "rating": 1.5095123177204128,
-      "address": "983 Lewis Rapids",
+      "address": "983 Colville street",
       "lat": 46.87190499528364,
       "lng": 28.54937769418778,
       "createdAt": "2022-04-16T12:03:33.225Z",
@@ -52,7 +52,7 @@
     "User": {
       "id": "2",
       "name": "Lukas",
-      "address": "Lithuania 1",
+      "address": "Pilkngton Street",
       "lat": 46.86110499528364,
       "lng": 28.54497769418778
     }
@@ -69,13 +69,13 @@
     "_deleted": null,
     "Restaurant": {
       "id": "7d7965f7-1b33-4b8c-9bac-0c22bc905030",
-      "name": "Jacobs - DuBuque",
+      "name": "Martin Anderson",
       "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant1.jpeg",
       "deliveryFee": 0.039448871531492236,
       "minDeliveryTime": 10,
       "maxDeliveryTime": 44,
       "rating": 1.5095123177204128,
-      "address": "983 Lewis Rapids",
+      "address": "Entebbe Road",
       "lat": 46.87190499528364,
       "lng": 28.54937769418778,
       "createdAt": "2022-04-16T12:03:33.225Z",
@@ -84,7 +84,7 @@
     "User": {
       "id": "3",
       "name": "Alex",
-      "address": "Happy land",
+      "address": "Sir Apollo Kaggwa",
       "lat": 46.86133499528364,
       "lng": 28.54421769418778
     }
