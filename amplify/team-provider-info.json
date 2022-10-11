@@ -10,6 +10,11 @@
       "StackName": "amplify-meal-staging-174408",
       "StackId": "arn:aws:cloudformation:us-east-1:510422890965:stack/amplify-meal-staging-174408/fc037160-4342-11ed-be03-0eaf53039dbb",
       "AmplifyAppId": "d1wwf0smdwitsn"
+    },
+    "categories": {
+      "auth": {
+        "Meal": {}
+      }
     }
   }
 }
