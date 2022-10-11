@@ -9,7 +9,8 @@ import HomeScreen from '../screens/HomeScreen';
 import OrderDetails from '../screens/OrderDetails';
 import OrdersScreen from '../screens/OrdersScreen';
 import RestaurantDetailsScreen from '../screens/RestaurantDetailsScreen';
-import ProfileScreen from "../screens/Profile";
+/* import ProfileScreen from "../screens/Profile"; */
+import ProfileScreen from "../screens/ProfileScreen";
 
 const Stack = createNativeStackNavigator();
 

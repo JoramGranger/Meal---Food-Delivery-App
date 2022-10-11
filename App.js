@@ -4,9 +4,12 @@ import { StyleSheet, View,} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import RootNavigator from './src/navigation';
 
+import { Amplify } from 'aws-amplify';
+import config from './src/aws-exports';
+import { withAuthenticator } from 'aws-amplify-react-native';
+Amplify.configure(config);
 
-
-export default function App() {
+function App() {
   return (
     <NavigationContainer>
       <RootNavigator />
@@ -23,3 +26,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center', */
   },
 });
+
+export default withAuthenticator(App);
